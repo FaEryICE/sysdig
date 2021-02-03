@@ -13,6 +13,9 @@ or GPL2.txt for full copies of the license.
 
 #include "kernel_flags.h"
 
+// Maximum var size allowed by the verifier
+#define BPF_MAX_VAR_SIZE 1ULL << 29
+
 #define SEC(NAME) __attribute__((section(NAME), used))
 
 #ifndef __always_inline
